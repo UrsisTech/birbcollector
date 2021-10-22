@@ -1,0 +1,17 @@
+{% extends 'base.html' %}
+{% block content %}
+
+<h1>Enclosure List</h1>
+
+{% for enclosure in enclosure_list %}
+  <a href="{% url 'enclosures_detail' enclosure.id %}">
+    <div class="card">
+        <div class="card-content">
+            <span class="card-title">{{ enclosure.name }}</span>
+            <p>Color: {{ enclosure.color }}</p>
+        </div>
+    </div>
+  </a>
+{% endfor %}
+
+{% endblock %}

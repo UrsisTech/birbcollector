@@ -1,0 +1,22 @@
+
+ 
+{% extends 'base.html' %}
+{% block content %}
+
+<h1>Enclosure Details</h1>
+
+<div class="row">
+  <div class="col s6 col-offset-3">
+    <div class="card">
+      <div class="card-content">
+        <span class="card-title">{{ enclosure.name }}</span>
+        <p>Color: {{ enclosure.color }}</p>
+      </div>
+      <div class="card-action">
+        <a href="{% url 'enclosures_update' enclosure.id %}">Edit</a>
+        <a href="{% url 'enclosures_delete' enclosure.id %}">Delete</a>
+      </div>
+    </div>
+  </div>
+</div>
+{% endblock %}

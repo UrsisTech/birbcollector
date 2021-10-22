@@ -10,6 +10,7 @@
     <title>Birb Collector</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
     <link rel="stylesheet" type="text/css" href="{% static 'css/style.css' %}">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
 </head>
 
 <body>
@@ -21,6 +22,9 @@
                 </ul>
                 <ul class="right">
                     <li><a href="{% url 'about' %}">About</a></li>
+                    <li><a href="{% url 'enclosures_create' %}">Add an Enclosure</a></li>
+                    <li><a href="{% url 'enclosures_index' %}">View All Enclosures</a></li>
+                    <li><a href="{% url 'birds_create' %}">Add a Bird</a></li>
                     <li><a href="{% url 'index' %}">View All My Birds</a></li>
                 </ul>
             </div>
